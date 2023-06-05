@@ -1,0 +1,68 @@
+% Compilation xelatex prezentace.tex
+% Beamer documentation: http://ftp.cvut.cz/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf
+
+% Author: Eliška Šestáková
+
+\documentclass[czech,aspectratio=169]{beamer}
+
+\usepackage{polyglossia}
+\setmainlanguage{czech}
+
+% appearance setting - https://hartwork.org/beamer-theme-matrix/
+\usetheme{Madrid}
+\usecolortheme{whale}
+
+\useinnertheme{rectangles} % options: default circles rectangles rounded inmargin
+\useoutertheme{default} % options: default, miniframes, smoothbars, sidebar, split, shadow, tree, smoothtree, infolines
+
+\definecolor{CVUT}{HTML}{0065BD}
+\definecolor{computedColor}{HTML}{00730d}
+\definecolor{currentColor}{HTML}{0042ad}
+\definecolor{waitingColor}{HTML}{db8700}
+\setbeamercolor{structure}{bg=white,fg=CVUT}
+
+% set CTU Technika font https://www.cvut.cz/logo-a-graficky-manual
+\usepackage{fontspec}
+\setsansfont{Technika-Book}
+
+% turn off navigation panel
+\beamertemplatenavigationsymbolsempty
+
+% notes
+%\setbeameroption{show notes} 
+
+% two monitor notes
+%\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen}
+
+\usepackage[style=iso-numeric]{biblatex} % biblatex
+\addbibresource{ref.bib}
+
+\usepackage{xevlna}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% TODO -FILL
+\title[short]{Full Title}
+\subtitle{TODO}
+\institute[FIT ČVUT v Praze]{Fakulta informačních technologií \\ České vysoké učení technické v Praze}
+\author[J. Pokorný]{Jan Pokorný}
+\date{\today}
+\titlegraphic{\includegraphics[width=.1\textwidth]{logo-cvut}}
+
+
+\begin{document}
+    \begin{frame}
+        \titlepage 
+    \end{frame}
+
+
+
+    \section*{Sources}
+    \begin{frame}{Sources}
+        
+        \printbibliography
+    \end{frame}
+\end{document}
+
+
