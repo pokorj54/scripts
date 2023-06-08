@@ -2,19 +2,19 @@
 
 # Rotates screen left if it is normal or vice versa.
 
-randr=gnome-randr # alternative to randr on wayland using GNOME Manjaro
+randr=gnome-randr # alternative to xrandr on wayland using GNOME Manjaro
 file=~/.screen_rotation
 screen_name=eDP-1
 
 if [ $# -eq 0 ]
 then
-    prev_rotation=$("$randr" | grep rotation)
+    prev_rotation=$("$randr" | grep rotation )
     echo $prev_rotation
     echo ==============
     case "$prev_rotation" in
 
-        *normal*)
-            rotation=left
+        *"rotation: normal, primary: yes"*)
+            rotation=right
             ;;
 
         *)
@@ -29,4 +29,7 @@ else
     exit 1
 fi
 
-"$randr" --output "$screen_name" --rotate $rotation
+# gnome-randr
+# "$randr" --output "$screen_name" --rotate $rotation
+# gnome-randr-rust
+"$randr" modify "$screen_name" --rotate $rotation
