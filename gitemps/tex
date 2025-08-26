@@ -10,4 +10,5 @@
 *.out
 *.toc
 *.bcf
-main.run.xml
+*.xdv
+*.run.xml
