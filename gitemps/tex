@@ -1,3 +1,4 @@
+*.pdf
 *.aux
 *.bbl
 *.blg
@@ -8,4 +9,5 @@
 *.lot
 *.out
 *.toc
-
+*.bcf
+main.run.xml
